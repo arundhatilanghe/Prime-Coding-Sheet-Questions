@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        double liters =  sc.nextDouble();
+        double distance =  sc.nextDouble();
+
+        double km = ((liters / distance) * 100);
+
+        double miles = (distance * 0.6214);
+        double gallons = (liters * 0.2642);
+
+        double mpg = miles/gallons;
+
+        System.out.printf("Liters/100 KM: %.2f%n", km);
+        System.out.printf("You need a sum of Rs.%.2f to cover the trip %.2f%n", mpg, mpg);
+    }
+}
