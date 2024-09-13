@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int input = sc.nextInt();
+        int num = input;
+        int reverse = 0;
+
+        if(input < 0) {
+            System.out.println("Invalid Input");
+            return;
+        }
+
+        for(; input != 0; input = input/10) {
+            int remainder = input % 10;
+            reverse = reverse * 10 + remainder;
+        }
+
+        if(num == reverse) {
+            System.out.println("Palindrome");
+        }
+        else {
+            System.out.println("Not a Palindrome");
+        }
+    }
+}
